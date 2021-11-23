@@ -269,6 +269,7 @@ GO
 -- Question 3 (10% pts): How can you create a view to show a list of Category and Product names, 
 -- and the price of each product?
 -- Order the result by the Category and Product!
+GO
 CREATE VIEW dbo.vCategories_Products
 	AS(
 		SELECT TOP 1000 
@@ -293,6 +294,7 @@ FROM dbo.vCategories_Products
 -- Question 4 (10% pts): How can you create a view to show a list of Product names 
 -- and Inventory Counts on each Inventory Date?
 -- Order the results by the Product, Date, and Count!
+GO
 CREATE VIEW dbo.vProducts_by_InventoryDate
 	AS(
 		SELECT TOP 1000
@@ -320,6 +322,7 @@ FROM dbo.vProducts_by_InventoryDate
 -- Question 5 (10% pts): How can you create a view to show a list of Inventory Dates 
 -- and the Employee that took the count?
 -- Order the results by the Date and return only one row per date!
+GO
 CREATE VIEW dbo.vInventory_by_Employee
 	AS(
 		SELECT DISTINCT TOP 1000  
@@ -344,6 +347,7 @@ FROM dbo.vInventory_by_Employee
 -- Question 6 (10% pts): How can you create a view show a list of Categories, Products, 
 -- and the Inventory Date and Count of each product?
 -- Order the results by the Category, Product, Date, and Count!
+GO
 CREATE VIEW dbo.vProducts_Inventories_Categories
 	AS(
 		SELECT TOP 1000
@@ -375,7 +379,7 @@ FROM dbo.vProducts_Inventories_Categories
 -- Question 7 (10% pts): How can you create a view to show a list of Categories, Products, 
 -- the Inventory Date and Count of each product, and the EMPLOYEE who took the count?
 -- Order the results by the Inventory Date, Category, Product and Employee!
-
+GO
 CREATE VIEW dbo.vProducts_Inventories_Categories_Emp
 	AS(
 		SELECT TOP 1000
@@ -407,6 +411,7 @@ FROM dbo.vProducts_Inventories_Categories_Emp
 -- Question 8 (10% pts): How can you create a view to show a list of Categories, Products, 
 -- the Inventory Date and Count of each product, and the Employee who took the count
 -- for the Products 'Chai' and 'Chang'? 
+GO
 CREATE VIEW dbo.vChai_Chang 
     AS(
         SELECT TOP 1000 
@@ -441,6 +446,7 @@ FROM dbo.vChai_Chang;
 
 -- Question 9 (10% pts): How can you create a view to show a list of Employees and the Manager who manages them?
 -- Order the results by the Manager's name!
+GO
 CREATE VIEW dbo.vEmployee_Managers 
     AS(
         SELECT TOP 1000
@@ -471,6 +477,7 @@ FROM dbo.vEmployee_Managers
 -- Question 10 (20% pts): How can you create one view to show all the data from all four 
 -- BASIC Views? Also show the Employee's Manager Name and order the data by 
 -- Category, Product, InventoryID, and Employee.
+GO
 CREATE VIEW dbo.vAll_Data 
 	AS (
 		SELECT TOP 1000
